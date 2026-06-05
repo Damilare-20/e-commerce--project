@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>DAMMYSHOP - Home</title>
+  </head>
+  <body class="bg-[#fdf6e3]/25 min-h-screen flex flex-col">
+    <nav
+      class="bg-white shadow-md sticky top-0 z-[9999] px-6 py-4 flex items-center justify-between"
+    >
+      <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold">
+          <span class="text-black">DAMMY</span
+          ><span class="text-orange-500">SHOP</span>
+        </span>
+        <a href="product.html" class="hover:text-orange-500">Products</a>
+        <a href="About.html" class="hover:text-orange-500">About</a>
+      </div>
+      <div class="flex-1 max-w-lg mx-6">
+        <div class="relative">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+            class="w-full border border-gray-300 rounded-full py-2 pl-10 pr-4 focus:ring-orange-500 focus:border-orange-500"
+          />
+          <span class="absolute left-3 top-2.5 text-gray-400">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+      </div>
+      <div class="flex items-center space-x-10">
+        <a href="contacts.html" class="hover:text-orange-500">Contacts</a>
+        <a
+          href="cart.html"
+          class="relative text-gray-700 hover:text-orange-500"
+        >
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span
+            id="cart-count"
+            class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+          >
+            0
+          </span>
+        </a>
+        <a href="login.html" class="hover:text-orange-500">Sign In</a>
+        <a
+          href="register.html"
+          class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition"
+        >
+          Register
+        </a>
+      </div>
+    </nav>
+    <div class="px-6 py-10">
+      <div
+        class="relative w-full h-screen rounded-lg overflow-hidden shadow-lg"
+      >
+        <img
+          src="https://plus.unsplash.com/premium_photo-1683746792239-6ce8cdd3ac78?w=1600&auto=format&fit=crop&q=60"
+          alt="Background"
+          class="w-full h-full object-cover filter blur-sm"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"
+        ></div>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="text-center px-6">
+            <h1
+              class="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg"
+              style="text-shadow: 0 4px 12px rgba(0, 0, 0, 0.279)"
+            >
+              Everything you need,<br />
+              all in one modern<br />
+              store.
+            </h1>
+            <p class="mt-4 text-gray-200 text-lg md:text-xl">
+              Curated styles, fast shipping, and designs that make a statement.
+            </p>
+            <div class="mt-6 flex justify-center gap-4">
+              <a
+                href="product.html"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md font-medium shadow"
+              >
+                Shop Now
+              </a>
+              <a
+                href="product.html"
+                class="border border-white/40 text-white px-5 py-2 rounded-md hover:bg-white/10"
+              >
+                Browse Collection
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w px-20 mt-10 mb-10">
+      <div
+        id="products"
+        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10"
+      ></div>
+      <div id="errorUser" class="text-center text-red-600 mt-6"></div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-bold">
+            <span class="text-white">DAMMY</span
+            ><span class="text-orange-500">SHOP</span>
+          </h2>
+          <p class="mt-4 text-sm">
+            Discover unique products that inspire your lifestyle. <br />
+            Quality craftsmanship meets modern design.
+          </p>
+          <p class="mt-4 text-sm flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-orange-500"></i>
+            Plot 12, Oduntan Street, Gbodofon, Aregbe Area <br />
+            Osogbo, Osun State, Nigeria
+          </p>
+          <p class="text-sm flex items-center gap-2">
+            <i class="fa-solid fa-phone text-orange-500"></i>
+            09163808454
+          </p>
+          <p class="text-sm flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-orange-500"></i>
+            ferzherzee1020@gmail.com
+          </p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">SHOP</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="product.html" class="hover:text-orange-500"
+                >All Products</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-orange-500">New Arrivals</a></li>
+            <li><a href="#" class="hover:text-orange-500">Sale</a></li>
+            <li><a href="#" class="hover:text-orange-500">Featured</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">CUSTOMER CARE</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="contacts.html" class="hover:text-orange-500"
+                >Contact Us</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-orange-500">Help Center</a></li>
+            <li><a href="#" class="hover:text-orange-500">Shipping Info</a></li>
+            <li>
+              <a href="#" class="hover:text-orange-500">Returns & Exchanges</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">COMPANY</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-orange-500">About Us</a></li>
+            <li><a href="#" class="hover:text-orange-500">Careers</a></li>
+            <li><a href="#" class="hover:text-orange-500">Blog</a></li>
+            <li><a href="#" class="hover:text-orange-500">Press</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

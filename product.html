@@ -1,0 +1,162 @@
+<!-- products.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DAMMYSHOP - Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#fdf6e3]/25 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav
+      class="bg-white shadow-md sticky top-0 z-[9999] px-6 py-4 flex flex-wrap items-center justify-between"
+    >
+      <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold">
+          <a href="index.html">
+            <span class="text-black">DAMMY</span
+            ><span class="text-orange-500">SHOP</span>
+          </a>
+        </span>
+        <a
+          href="product.html"
+          class="hidden sm:inline  hover:text-orange-500"
+          >Products</a
+        >
+        <a
+          href="About.html"
+          class="hidden sm:inline  hover:text-orange-500"
+          >About</a
+        >
+      </div>
+
+      <div class="flex-1 max-w-lg mx-6 w-full sm:w-auto mt-4 sm:mt-0">
+        <div class="relative">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+            class="w-full border border-gray-300 rounded-full py-2 pl-10 pr-4 focus:ring-orange-500 focus:border-orange-500"
+          />
+          <span class="absolute left-3 top-2.5 text-gray-400">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+      </div>
+      <div class="flex items-center space-x-6 mt-4 sm:mt-0">
+        <a href="contacts.html" class="hover:text-orange-500"
+          >Contacts</a
+        >
+        <a
+          href="cart.html"
+          class="relative text-gray-700 hover:text-orange-500"
+        >
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span
+            id="cart-count"
+            class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+          >
+            0
+          </span>
+        </a>
+        <a href="login.html" class="hover:text-orange-500"
+          >Sign In</a
+        >
+        <a
+          href="register.html"
+          class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition"
+        >
+          Register
+        </a>
+      </div>
+    </nav>
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+        Our Products
+      </h2>
+      <p class="text-center text-gray-600 mb-6">
+        Browse the full product collection and add items directly to your cart.
+      </p>
+      <div
+        id="products"
+        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      ></div>
+      <div id="errorUser" class="text-center text-red-600 mt-6"></div>
+    </main>
+    <footer class="bg-gray-900 text-gray-300 px-8 py-12">
+      <div
+        class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left"
+      >
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-bold">
+            <span class="text-white">DAMMY</span>
+            <span class="text-orange-500">SHOP</span>
+          </h2>
+          <p class="mt-4 text-sm">
+            Discover unique products that inspire your lifestyle. <br />
+            Quality craftsmanship meets modern design.
+          </p>
+          <p
+            class="mt-4 text-sm flex items-center gap-2 justify-center md:justify-start"
+          >
+            <i class="fa-solid fa-location-dot text-orange-500"></i>
+            Plot 12, Oduntan Street, Gbodofon, Aregbe Area <br />
+            Osogbo, Osun State, Nigeria
+          </p>
+          <p
+            class="text-sm flex items-center gap-2 justify-center md:justify-start"
+          >
+            <i class="fa-solid fa-phone text-orange-500"></i>
+            09163808454
+          </p>
+          <p
+            class="text-sm flex items-center gap-2 justify-center md:justify-start"
+          >
+            <i class="fa-solid fa-envelope text-orange-500"></i>
+            ferzherzee1020@gmail.com
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-3">SHOP</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-orange-500">All Products</a></li>
+            <li><a href="#" class="hover:text-orange-500">New Arrivals</a></li>
+            <li><a href="#" class="hover:text-orange-500">Sale</a></li>
+            <li><a href="#" class="hover:text-orange-500">Featured</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">CUSTOMER CARE</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="contacts.html" class="hover:text-orange-500"
+                >Contact Us</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-orange-500">Help Center</a></li>
+            <li><a href="#" class="hover:text-orange-500">Shipping Info</a></li>
+            <li>
+              <a href="#" class="hover:text-orange-500">Returns & Exchanges</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">COMPANY</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-orange-500">About Us</a></li>
+            <li><a href="#" class="hover:text-orange-500">Careers</a></li>
+            <li><a href="#" class="hover:text-orange-500">Blog</a></li>
+            <li><a href="#" class="hover:text-orange-500">Press</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="product.js"></script>
+  </body>
+</html>

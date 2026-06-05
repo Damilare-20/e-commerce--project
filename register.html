@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DAMMYSHOP-Register</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#fdf6e3]/25 min-h-screen flex flex-col">
+    <nav
+      class="bg-white shadow-md sticky top-0 z-[9999] px-6 py-4 flex items-center justify-between"
+    >
+      <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold">
+          <a href="index.html">
+            <span class="text-black">DAMMY</span
+            ><span class="text-orange-500">SHOP</span></a
+          >
+        </span>
+        <a href="product.html" class="hover:text-orange-500">Products</a>
+        <a href="About.html" class="hover:text-orange-500">About</a>
+      </div>
+      <div class="flex-1 max-w-lg mx-6">
+        <div class="relative">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+            class="w-full border border-gray-300 rounded-full py-2 pl-10 pr-4 focus:ring-orange-500 focus:border-orange-500"
+          />
+          <span class="absolute left-3 top-2.5 text-gray-400">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+      </div>
+      <div class="flex items-center space-x-10">
+        <a href="contacts.html" class="hover:text-orange-500">Contacts</a>
+        <a
+          href="cart.html"
+          class="relative text-gray-700 hover:text-orange-500"
+        >
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span
+            id="cart-count"
+            class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+          >
+            0
+          </span>
+        </a>
+        <a href="login.html" class="hover:text-orange-500">Sign In</a>
+        <a
+          href="register.html"
+          class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition"
+        >
+          Register
+        </a>
+      </div>
+    </nav>
+    <div class="flex-grow flex items-center justify-center">
+      <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 mt-8">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
+          Create Your Account
+        </h2>
+
+        <form id="register-form" class="space-y-4">
+          <div>
+            <label
+              for="username"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Full Name
+            </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your full name"
+              class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+            />
+          </div>
+
+          <div>
+            <label
+              for="password"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create password"
+              class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+            />
+          </div>
+
+          <div>
+            <label
+              for="confirm-password"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Confirm password"
+              class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 transition duration-200"
+          >
+            Register
+          </button>
+          <div id="register-error" class="text-red-600 text-sm mt-2"></div>
+        </form>
+        <p class="mt-4 text-center text-sm text-gray-600">
+          Already have an account?
+          <a href="login.html" class="text-orange-600 hover:underline"
+            >Log in here</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>
