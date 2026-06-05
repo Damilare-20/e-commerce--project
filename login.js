@@ -24,7 +24,6 @@ if (form) {
     errorBox.classList.remove("text-green-600");
     errorBox.classList.add("text-red-600");
 
-    // Validation
     if (!email || !password) {
       errorBox.textContent = "Please fill in both email and password.";
       return;
