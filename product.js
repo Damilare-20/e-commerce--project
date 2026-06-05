@@ -1,9 +1,9 @@
+// Load products and render them
 async function loadProducts() {
   try {
     const response = await fetch("https://dummyjson.com/products?limit=20");
     const data = await response.json();
     const products = data.products;
-    // console.log(products)
 
     function renderProducts(items) {
       if (items.length === 0) {
@@ -20,13 +20,13 @@ async function loadProducts() {
           <div class="p-4">
             <h3 class="text-lg font-semibold text-gray-600">${product.title}</h3>
             <p class="text-sm text-gray-600 mb-2">${product.brand || ""}</p>
-            <p class="text-black-600 font-bold">$${product.price}</p>
+            <p class="text-black font-bold">$${product.price}</p>
             <button class="add-to-cart w-full bg-orange-500 text-white py-1 rounded-full mt-2 hover:bg-orange-600">
               Add to Cart
             </button>
           </div>
         </div>
-      `,
+      `
         )
         .join("");
 
@@ -62,12 +62,19 @@ async function loadProducts() {
               0
             );
           }
+
+          Toastify({
+            text: "Added to cart",
+            duration: 3000,
+            className: "success",
+          }).showToast();
         });
       });
     }
 
     renderProducts(products);
 
+    // Search filter
     const searchInput = document.getElementById("search");
     searchInput.addEventListener("input", () => {
       const query = searchInput.value.toLowerCase();
@@ -86,3 +93,13 @@ async function loadProducts() {
 }
 
 loadProducts();
+
+// ✅ Mobile menu toggle for responsiveness
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+}

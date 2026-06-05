@@ -1,29 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <title>DAMMYSHOP - Login</title>
-</head>
-<body class="bg-[#fdf6e3]/25 min-h-screen flex flex-col">
-   <nav
-      class="bg-white shadow-md sticky top-0 z-[9999] px-6 py-4 flex items-center justify-between"
-    >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>DAMMYSHOP - Login</title>
+  </head>
+  <body class="bg-[#fdf6e3]/25 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-[9999] px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
       <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold">
-        <a href="index.html">  <span class="text-black">DAMMY</span
-          ><span class="text-orange-500">SHOP</span></a>
+          <a href="index.html">
+            <span class="text-black">DAMMY</span><span class="text-orange-500">SHOP</span>
+          </a>
         </span>
-         <a href="product.html" class="hover:text-orange-500"
-          >Products</a
-        >
-        <a href="About.html" class="hover:text-orange-500"
-          >About</a
-        >
       </div>
-      <div class="flex-1 max-w-lg mx-6">
+
+      <!-- Search -->
+      <div class="flex-1 max-w-lg mx-6 w-full">
         <div class="relative">
           <input
             type="text"
@@ -36,71 +37,96 @@
           </span>
         </div>
       </div>
-      <div class="flex items-center space-x-10">
-        <a href="contacts.html" class="hover:text-orange-500"
-          >Contacts</a
-        >
-        <a
-          href="cart.html"
-          class="relative text-gray-700 hover:text-orange-500"
-        >
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center space-x-6 lg:space-x-10">
+        <a href="products.html" class="hover:text-orange-500">Products</a>
+        <a href="about.html" class="hover:text-orange-500">About</a>
+        <a href="contacts.html" class="hover:text-orange-500">Contacts</a>
+        <a href="cart.html" class="relative text-gray-700 hover:text-orange-500">
           <i class="fa-solid fa-cart-shopping text-xl"></i>
-          <span
-            id="cart-count"
-            class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-          >
-            0
-          </span>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
         </a>
-        <a href="login.html" class="hover:text-orange-500"
-          >Sign In</a
-        >
-        <a
-          href="register.html"
-          class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition"
-        >
-          Register
-        </a>
+        <a href="login.html" class="hover:text-orange-500">Sign In</a>
+        <a href="register.html" class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">Register</a>
       </div>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
 
-  <main class="flex-grow flex items-center justify-center mt-10">
-    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Login to DAMMYSHOP</h2>
-      <form id="login-form" class="space-y-4">
-  <div>
-    <label for="login-email" class="block text-gray-600 mb-2">Email</label>
-    <input 
-      type="email" 
-      id="login-email" 
-      placeholder="Enter your email" 
-      class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-orange-300"
-    />
-  </div>
-  <div>
-    <label for="login-password" class="block text-gray-600 mb-2">Password</label>
-    <input 
-      type="password" 
-      id="login-password" 
-      placeholder="Enter your password" 
-      class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-orange-300"
-    />
-  </div>
-  <button 
-    type="submit" 
-    class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
-  >
-    Login
-  </button>
-  <div id="login-error" class="text-red-600 text-sm mt-2"></div>
-</form>
-
-      <p class="mt-4 text-sm text-gray-500 text-center">
-        Don’t have an account? <a href="register.html" class="text-orange-500 hover:underline">Register</a>
-      </p>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-md px-4 py-4 space-y-4 md:hidden">
+      <a href="products.html" class="block hover:text-orange-500">Products</a>
+      <a href="about.html" class="block hover:text-orange-500">About</a>
+      <a href="contacts.html" class="block hover:text-orange-500">Contacts</a>
+      <a href="cart.html" class="block hover:text-orange-500">Cart</a>
+      <a href="login.html" class="block hover:text-orange-500">Sign In</a>
+      <a href="register.html" class="block bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">Register</a>
     </div>
-  </main>
 
-  <script src="login.js"></script>
-</body>
+    <!-- Main -->
+    <main class="flex-grow flex items-center justify-center px-6 py-12">
+      <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Sign In</h1>
+        <form id="login-form" class="space-y-4">
+          <div>
+            <label for="login-email" class="block text-gray-700 mb-2">Email</label>
+            <input type="email" id="login-email" placeholder="Enter your email" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-orange-500 focus:border-orange-500" />
+          </div>
+          <div>
+            <label for="login-password" class="block text-gray-700 mb-2">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your password" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-orange-500 focus:border-orange-500" />
+          </div>
+          <button type="submit" class="w-full bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition">Login</button>
+          <div id="login-error" class="text-red-600 text-sm mt-2"></div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-bold"><span class="text-white">DAMMY</span><span class="text-orange-500">SHOP</span></h2>
+          <p class="mt-4 text-sm">Discover unique products that inspire your lifestyle. <br />Quality craftsmanship meets modern design.</p>
+          <p class="mt-4 text-sm flex items-center gap-2"><i class="fa-solid fa-location-dot text-orange-500"></i> Plot 12, Oduntan Street, Gbodofon, Aregbe Area <br />Osogbo, Osun State, Nigeria</p>
+          <p class="text-sm flex items-center gap-2"><i class="fa-solid fa-phone text-orange-500"></i> 09163808454</p>
+          <p class="text-sm flex items-center gap-2"><i class="fa-solid fa-envelope text-orange-500"></i> ferzherzee1020@gmail.com</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">SHOP</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="hover:text-orange-500">All Products</a></li>
+            <li><a href="products.html" class="hover:text-orange-500">New Arrivals</a></li>
+            <li><a href="products.html" class="hover:text-orange-500">Sale</a></li>
+            <li><a href="products.html" class="hover:text-orange-500">Featured</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">CUSTOMER CARE</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="contacts.html" class="hover:text-orange-500">Contact Us</a></li>
+            <li><a href="help.html" class="hover:text-orange-500">Help Center</a></li>
+            <li><a href="shipping.html" class="hover:text-orange-500">Shipping Info</a></li>
+            <li><a href="returns.html" class="hover:text-orange-500">Returns & Exchanges</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">COMPANY</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-orange-500">About Us</a></li>
+            <li><a href="careers.html" class="hover:text-orange-500">Careers</a></li>
+            <li><a href="blog.html" class="hover:text-orange-500">Blog</a></li>
+            <li><a href="press.html" class="hover:text-orange-500">Press</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="login.js"></script>
+  </body>
 </html>

@@ -3,32 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>About Us - DAMMYSHOP</title>
   </head>
   <body class="bg-[#fdf6e3]/25 min-h-screen flex flex-col">
-    <nav
-      class="bg-white shadow-md sticky top-0 z-[9999] px-6 py-4 flex items-center justify-between"
-    >
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-[9999] px-6 py-4 flex items-center justify-between">
       <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold">
           <a href="index.html">
-            <span class="text-black">DAMMY</span
-            ><span class="text-orange-500">SHOP</span></a
-          >
+            <span class="text-black">DAMMY</span><span class="text-orange-500">SHOP</span>
+          </a>
         </span>
-        <a href="product.html" class="hover:text-orange-500"
-          >Products</a
-        >
-        <a href="About.html" class="hover:text-orange-500"
-          >About</a
-        >
       </div>
-      <div class="flex-1 max-w-lg mx-6">
+
+      <!-- Search -->
+      <div class="flex-1 max-w-lg mx-6 w-full">
         <div class="relative">
           <input
             type="text"
@@ -41,49 +36,47 @@
           </span>
         </div>
       </div>
-      <div class="flex items-center space-x-10">
-        <a href="contacts.html" class="hover:text-orange-500"
-          >Contacts</a
-        >
-        <a
-          href="cart.html"
-          class="relative text-gray-700 hover:text-orange-500"
-        >
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center space-x-6 lg:space-x-10">
+        <a href="product.html" class="hover:text-orange-500">Products</a>
+        <a href="about.html" class="hover:text-orange-500">About</a>
+        <a href="contacts.html" class="hover:text-orange-500">Contacts</a>
+        <a href="cart.html" class="relative text-gray-700 hover:text-orange-500">
           <i class="fa-solid fa-cart-shopping text-xl"></i>
-          <span
-            id="cart-count"
-            class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-          >
-            0
-          </span>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
         </a>
-        <a href="login.html" class="hover:text-orange-500"
-          >Sign In</a
-        >
-        <a
-          href="register.html"
-          class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition"
-        >
-          Register
-        </a>
+        <a href="login.html" class="hover:text-orange-500">Sign In</a>
+        <a href="register.html" class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">Register</a>
       </div>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
 
-    <section
-      class="bg-[#fdf6e3]/25 rounded-xl shadow-lg mx-6 my-12 p-10 relative"
-    >
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-md px-4 py-4 space-y-4 md:hidden">
+      <a href="product.html" class="block hover:text-orange-500">Products</a>
+      <a href="about.html" class="block hover:text-orange-500">About</a>
+      <a href="contacts.html" class="block hover:text-orange-500">Contacts</a>
+      <a href="cart.html" class="block hover:text-orange-500">Cart</a>
+      <a href="login.html" class="block hover:text-orange-500">Sign In</a>
+      <a href="register.html" class="block bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">Register</a>
+    </div>
+
+    <!-- About Section -->
+    <section class="bg-[#fdf6e3]/25 rounded-xl shadow-lg mx-6 my-12 p-10 relative">
       <div class="absolute top-6 left-10 font-bold">
-        <span class="text-black">ABOUT DAMMY</span
-        ><span class="text-orange-500">SHOP</span>
+        <span class="text-black">ABOUT DAMMY</span><span class="text-orange-500">SHOP</span>
       </div>
       <div class="text-center mb-12 mt-16">
         <h1 class="text-3xl md:text-4xl font-bold mb-6">
           A modern shopping experience built around
           <span class="text-orange-500">convenience and quality</span>
         </h1>
-        <p
-          class="text-gray-700 leading-relaxed text-lg text-center max-w-3xl mx-auto"
-        >
+        <p class="text-gray-700 leading-relaxed text-lg text-center max-w-3xl mx-auto">
           At DAMMYSHOP, we believe shopping should be more than just buying
           products — it should be an experience. Our mission is to bring you
           carefully curated collections that blend quality craftsmanship with
@@ -94,42 +87,27 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div
-          class="bg-[#fdf6e3]/40 shadow-md rounded-lg p-8 hover:shadow-lg transition"
-        >
+        <div class="bg-[#fdf6e3]/40 shadow-md rounded-lg p-8 hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">Quality Products</h3>
-          <p class="text-gray-600">
-            We are committed to offering products that customers can trust and
-            shop with confidence.
-          </p>
+          <p class="text-gray-600">We are committed to offering products that customers can trust and shop with confidence.</p>
         </div>
-        <div
-          class="bg-[#fdf6e3]/40 shadow-md rounded-lg p-8 hover:shadow-lg transition"
-        >
+        <div class="bg-[#fdf6e3]/40 shadow-md rounded-lg p-8 hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">Easy Shopping</h3>
-          <p class="text-gray-600">
-            Our store is structured to make browsing, selecting, and shopping as
-            simple as possible.
-          </p>
+          <p class="text-gray-600">Our store is structured to make browsing, selecting, and shopping as simple as possible.</p>
         </div>
-        <div
-          class="bg-[#fdf6e3]/40 shadow-md rounded-lg p-8 hover:shadow-lg transition"
-        >
+        <div class="bg-[#fdf6e3]/40 shadow-md rounded-lg p-8 hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">Customer Focus</h3>
-          <p class="text-gray-600">
-            Everything about DAMMYSHOP is centered around giving customers a
-            better and more enjoyable shopping experience.
-          </p>
+          <p class="text-gray-600">Everything about DAMMYSHOP is centered around giving customers a better and more enjoyable shopping experience.</p>
         </div>
       </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-300 px-8 py-12 mt-auto">
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 px-6 md:px-8 py-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
         <div class="md:col-span-2">
           <h2 class="text-2xl font-bold">
-            <span class="text-white">DAMMY</span
-            ><span class="text-orange-500">SHOP</span>
+            <span class="text-white">DAMMY</span><span class="text-orange-500">SHOP</span>
           </h2>
           <p class="mt-4 text-sm">
             Discover unique products that inspire your lifestyle. <br />
@@ -137,57 +115,55 @@
           </p>
           <p class="mt-4 text-sm flex items-center gap-2">
             <i class="fa-solid fa-location-dot text-orange-500"></i>
-            Plot 12, Oduntan Street, Gbodofon, Aregbe Area <br />Osogbo, Osun
-            State, Nigeria
+            Plot 12, Oduntan Street, Gbodofon, Aregbe Area <br />Osogbo, Osun State, Nigeria
           </p>
           <p class="text-sm flex items-center gap-2">
             <i class="fa-solid fa-phone text-orange-500"></i> 09163808454
           </p>
           <p class="text-sm flex items-center gap-2">
-            <i class="fa-solid fa-envelope text-orange-500"></i>
-            ferzherzee1020@gmail.com
+            <i class="fa-solid fa-envelope text-orange-500"></i> ferzherzee1020@gmail.com
           </p>
         </div>
         <div>
           <h3 class="text-white font-semibold mb-3">SHOP</h3>
           <ul class="space-y-2 text-sm">
-            <li>
-              <a href="product.html" class="hover:text-orange-500"
-                >All Products</a
-              >
-            </li>
-            <li><a href="#" class="hover:text-orange-500">New Arrivals</a></li>
-            <li><a href="#" class="hover:text-orange-500">Sale</a></li>
-            <li><a href="#" class="hover:text-orange-500">Featured</a></li>
+            <li><a href="products.html" class="hover:text-orange-500">All Products</a></li>
+            <li><a href="products.html" class="hover:text-orange-500">New Arrivals</a></li>
+            <li><a href="products.html" class="hover:text-orange-500">Sale</a></li>
+            <li><a href="products.html" class="hover:text-orange-500">Featured</a></li>
           </ul>
         </div>
         <div>
           <h3 class="text-white font-semibold mb-3">CUSTOMER CARE</h3>
           <ul class="space-y-2 text-sm">
-            <li>
-              <a href="contacts.html" class="hover:text-orange-500"
-                >Contact Us</a
-              >
-            </li>
-            <li><a href="#" class="hover:text-orange-500">Help Center</a></li>
-            <li><a href="#" class="hover:text-orange-500">Shipping Info</a></li>
-            <li>
-              <a href="#" class="hover:text-orange-500">Returns & Exchanges</a>
-            </li>
+            <li><a href="contacts.html" class="hover:text-orange-500">Contact Us</a></li>
+            <li><a href="help.html" class="hover:text-orange-500">Help Center</a></li>
+            <li><a href="shipping.html" class="hover:text-orange-500">Shipping Info</a></li>
+            <li><a href="returns.html" class="hover:text-orange-500">Returns & Exchanges</a></li>
           </ul>
         </div>
         <div>
           <h3 class="text-white font-semibold mb-3">COMPANY</h3>
           <ul class="space-y-2 text-sm">
-            <li>
-              <a href="about.html" class="hover:text-orange-500">About Us</a>
-            </li>
-            <li><a href="#" class="hover:text-orange-500">Careers</a></li>
-            <li><a href="#" class="hover:text-orange-500">Blog</a></li>
-            <li><a href="#" class="hover:text-orange-500">Press</a></li>
+            <li><a href="about.html" class="hover:text-orange-500">About Us</a></li>
+            <li><a href="careers.html" class="hover:text-orange-500">Careers</a></li>
+            <li><a href="blog.html" class="hover:text-orange-500">Blog</a></li>
+            <li><a href="press.html" class="hover:text-orange-500">Press</a></li>
           </ul>
         </div>
       </div>
     </footer>
+
+    <script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
+
   </body>
 </html>
